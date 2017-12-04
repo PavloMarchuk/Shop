@@ -13,3 +13,4 @@ namespace Shop.BOL.Cervices.Instatnt
 		protected override MapperConfiguration MapConfig()		{			MapperConfiguration config = new MapperConfiguration(cfg =>			{				cfg.CreateMap<ProductVM, Product>();				cfg.CreateMap<Product, ProductVM>()				.ForMember("CategoryName", opt => opt.MapFrom(ef => ef.Category.CategoryName));			});			return config;		}
 	}
 }
+//Shop.BOL.Cervices.Instatnt.ProductVMRep

@@ -1,0 +1,80 @@
+﻿@model Shop.BOL.Models.ProductVM
+@{
+	ViewBag.Title = "картка товару";
+}
+
+
+<div class="col-md-3">
+	
+	<p>
+		<a href="~/img/1.jpg"> <img src="@ViewBag.prima" width="200" alt="Пример"></a>
+	</p>
+	<p>
+		<a href="~/img/1.jpg">  @Html.DisplayFor(model => model.ProductName) </a>
+	</p>
+	<p>
+		@Html.DisplayFor(model => model.Price) ₴
+	</p>	
+   
+    <dl class="dl-horizontal">
+       
+
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>*@
+
+        @*<dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>*@       
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>*@
+
+        @*<dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>*@
+				
+        @*<dt>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>*@
+
+        @*<dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>*@
+
+		
+		<dt hidden>
+			@Html.DisplayNameFor(model => model.ProductId)
+		</dt>
+		<dd hidden>
+			@Html.DisplayFor(model => model.ProductId)
+		</dd>
+		<dt hidden>
+			@Html.DisplayNameFor(model => model.CategoryId)
+		</dt>
+		<dd hidden>
+			@Html.DisplayFor(model => model.CategoryId)
+		</dd>
+		<dt hidden>
+			@Html.DisplayNameFor(model => model.ProductDescription)
+		</dt>
+		<dd hidden>
+			@Html.DisplayFor(model => model.ProductDescription)
+		</dd>
+		<dt hidden>
+			@Html.DisplayNameFor(model => model.DateCreate)
+		</dt>
+		<dd hidden>
+			@Html.DisplayFor(model => model.DateCreate)
+		</dd>
+		<dt hidden>
+			@Html.DisplayNameFor(model => model.Stockpile)
+		</dt>
+		<dd hidden>
+			@Html.DisplayFor(model => model.Stockpile)
+		</dd>
+
+    </dl>
+</div>

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Shop.BOL.Cervices.Instatnt
 {
-	class CartStatusVMRep : CommonDTOService<CartStatusVM, CartStatu>
+	public class CartStatusVMRep : CommonDTOService<CartStatusVM, CartStatu>
 	{
 		public CartStatusVMRep(CartStatusRep eRep) : base(eRep) { }
 

@@ -21,6 +21,17 @@ namespace TESTconsole
 			CategoryVM laptops = categoryRep.FindBy(c => c.CategoryName == "Laptop").FirstOrDefault();
 			PhotoVMRep photoRep = new PhotoVMRep(new PhotoRep(SC));
 
+			ProductVM ноут = PR.FindBy(n => n.ProductName.Contains("Ноутбук Dell")).FirstOrDefault();
+			
+			var ноутбукФОТОклекція = photoRep.FindBy(c => c.ProductId== ноут.ProductId);
+
+			foreach (PhotoVM item in ноутбукФОТОклекція)
+			{
+				Console.WriteLine($"{ item.PhotoURL }");
+			}
+			
+
+
 			//foreach (var item in categoryRep.GetAll())
 			//{
 			//	Console.WriteLine($"{item.CategoryId} {item.CategoryName, -32}  {item.ParentId}  {item.ParentName, - 15}");
