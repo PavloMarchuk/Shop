@@ -34,7 +34,7 @@ namespace Step.Repository.Common
             return dbSet.Where(predicate);
         }
 
-        public T Get(int id)
+        public T Get(Guid id)
         {
             return dbSet.Find(id);
         }

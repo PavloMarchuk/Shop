@@ -26,17 +26,17 @@ namespace TESTconsole
 			//	Console.WriteLine($"{item.CategoryId} {item.CategoryName, -32}  {item.ParentId}  {item.ParentName, - 15}");
 			//}
 
-			ProductVM photoVoid = new ProductVM
-			{
-				CategoryId = laptops.CategoryId,
-				DateCreate = DateTime.Now,
-				Price = 0,				
-				ProductName = "photoVoid",
-				Stockpile = 0
+			//ProductVM photoVoid = new ProductVM
+			//{
+			//	CategoryId = laptops.CategoryId,
+			//	DateCreate = DateTime.Now,
+			//	Price = 0,				
+			//	ProductName = "photoVoid",
+			//	Stockpile = 0
 
-			};
+			//};
 
-			PR.AddOrUpdate(photoVoid);
+			//PR.AddOrUpdate(photoVoid);
 
 			
 

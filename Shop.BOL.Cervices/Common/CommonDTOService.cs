@@ -38,7 +38,7 @@ namespace Shop.BOL.Cervices.Common
 			MapperInstantiate();    //ініціалізація мапера в конструторі
 		}
 
-		public DTO_T Get(int id)
+		public DTO_T Get(Guid id)
 		{
 			EF_E ef_entity = eRep.Get(id);
 

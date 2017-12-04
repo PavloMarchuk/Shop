@@ -9,7 +9,7 @@ namespace Shop.BOL.Cervices.Common
 {
 	public interface IDTOService<T> where T : class, new()
 	{
-		T Get(int id);
+		T Get(Guid id);
 		IEnumerable<T> GetAll();
 		IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
 		void AddOrUpdate(T obj);

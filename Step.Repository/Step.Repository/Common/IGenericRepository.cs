@@ -11,7 +11,7 @@ namespace Step.Repository.Common
     {
         IEnumerable<T> GetAll();
         IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
-        T Get(int id);
+        T Get(Guid id);
         void AddOrUpdate(T obj);
         void Delete(T obj);
         //void Save();
