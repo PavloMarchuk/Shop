@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB66FCCB-BAC5-450C-8337-9B141541CA00}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shop.BOL.Cervices</RootNamespace>
+    <AssemblyName>Shop.BOL.Cervices</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.2.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CommonDTOService.cs" />
+    <Compile Include="Common\IDTOService.cs" />
+    <Compile Include="Instatnt\CartStatusVMRep.cs" />
+    <Compile Include="Instatnt\CartVMRep.cs" />
+    <Compile Include="Instatnt\CategoryVMRep.cs" />
+    <Compile Include="Instatnt\DeliveryMethodVMRep.cs" />
+    <Compile Include="Instatnt\OrderPosVMRep.cs" />
+    <Compile Include="Instatnt\PhotoVMRep.cs" />
+    <Compile Include="Instatnt\ProductVMRep.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.BOL\Shop.BOL.csproj">
+      <Project>{DA9DB49C-9EFD-4847-96C4-E1E3A3548CD9}</Project>
+      <Name>Shop.BOL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.DAL\Shop.DAL.csproj">
+      <Project>{58F9BB1E-0ABF-471B-9FF4-983A7165A228}</Project>
+      <Name>Shop.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Step.RepositoryInstatnt\Step.RepositoryInstatnt.csproj">
+      <Project>{E0306C04-7630-4DAC-A4B0-66EF74830CA7}</Project>
+      <Name>Step.RepositoryInstatnt</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Step.Repository\Step.Repository\Step.Repository.csproj">
+      <Project>{23E58A8F-7263-43B2-8141-3149DCE8C3C5}</Project>
+      <Name>Step.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

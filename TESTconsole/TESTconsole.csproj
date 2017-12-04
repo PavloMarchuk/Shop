@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70C1BFB9-0F1C-45BF-AF42-982FBF00A8C9}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TESTconsole</RootNamespace>
+    <AssemblyName>TESTconsole</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shop.BOL.Cervices\Shop.BOL.Cervices.csproj">
+      <Project>{EB66FCCB-BAC5-450C-8337-9B141541CA00}</Project>
+      <Name>Shop.BOL.Cervices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.BOL\Shop.BOL.csproj">
+      <Project>{DA9DB49C-9EFD-4847-96C4-E1E3A3548CD9}</Project>
+      <Name>Shop.BOL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shop.DAL\Shop.DAL.csproj">
+      <Project>{58F9BB1E-0ABF-471B-9FF4-983A7165A228}</Project>
+      <Name>Shop.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Step.RepositoryInstatnt\Step.RepositoryInstatnt.csproj">
+      <Project>{E0306C04-7630-4DAC-A4B0-66EF74830CA7}</Project>
+      <Name>Step.RepositoryInstatnt</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="img\1.jpg" />
+    <Content Include="img\copy_dell_alienware_15_r3_a5f7161sddsw_r3_599452e1c9d33_images_2146152968.jpg" />
+    <Content Include="img\copy_dell_alienware_15_r3_a5f7161sddsw_r3_599452e1c9d33_images_2146153150.jpg" />
+    <Content Include="img\copy_dell_alienware_15_r3_a5f7161sddsw_r3_599452e1c9d33_images_2146153388.jpg" />
+    <Content Include="img\copy_dell_alienware_15_r3_a5f7161sddsw_r3_599452e1c9d33_images_2146153570.jpg" />
+    <Content Include="img\copy_dell_alienware_15_r3_a5f7161sddsw_r3_599452e1c9d33_images_2146153661.jpg" />
+    <Content Include="img\copy_dell_alienware_15_r3_a5f7161sddsw_r3_599452e1c9d33_images_2146153752.jpg" />
+    <Content Include="img\Записати.PNG" />
+    <Content Include="img\Blue.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
