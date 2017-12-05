@@ -13,20 +13,29 @@ namespace Shop.WUI.Controllers
 {
     public class ProductController : Controller
     {
+		IDTOService<CartVM> cartService;
 		//ShopContext SC = new ShopContext();
-		IDTOService<Product> productRep;
-		IDTOService<Photo> photoRep;
+		IDTOService<ProductVM> productRep;
+		IDTOService<PhotoVM> photoRep;
 
-		public ProductController(IDTOService<Product> productRep_, IDTOService<Photo> photoRep_)
+		public ProductController(IDTOService<CartVM> cartService, IDTOService<ProductVM> productRep_, IDTOService<PhotoVM> photoRep_)
 		{
+			this.cartService = cartService;
 			productRep = productRep_;
 			photoRep = photoRep_;
 		}
 
+		//public ProductController()
+		//{
+		//	this.cartService = new CartVMService(new CartRep(new ShopContext()));
+		//	productRep = new ProductVMService(new ProductRep(new ShopContext()));
+		//	photoRep = new PhotoVMService(new PhotoRep(new ShopContext()));
+		//}
+
 		// GET: Product
 		public ActionResult Index()
         {
-			IEnumerable<Product> model = productRep.GetAll();
+			IEnumerable<ProductVM> model = productRep.GetAll();
 
 			return View(model);
         }

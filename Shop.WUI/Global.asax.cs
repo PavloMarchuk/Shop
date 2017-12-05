@@ -22,6 +22,7 @@ namespace Shop.WUI
 
 			//using Autofac;
 			var builder = new ContainerBuilder();
+			builder.RegisterControllers(typeof(MvcApplication).Assembly).PropertiesAutowired();
 			builder.RegisterModule(new AdderessAutofacModule());
 			var container = builder.Build();
 			DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

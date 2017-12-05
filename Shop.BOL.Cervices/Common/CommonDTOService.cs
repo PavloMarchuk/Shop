@@ -32,9 +32,9 @@ namespace Shop.BOL.Cervices.Common
 			mapper = MapConfig().CreateMapper();
 		}
 
-		public CommonDTOService(IGenericRepository<EF_E> tRep)
+		public CommonDTOService(IGenericRepository<EF_E> eRep)
 		{
-			this.eRep = tRep;       // ініціалізація репозиторію отриманим з параметрів
+			this.eRep = eRep;       // ініціалізація репозиторію отриманим з параметрів
 			MapperInstantiate();    //ініціалізація мапера в конструторі
 		}
 

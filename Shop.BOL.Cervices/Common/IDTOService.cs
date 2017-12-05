@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace Shop.BOL.Cervices.Common
 {
-	public interface IDTOService<T> where T : class, new()
+	public interface IDTOService<DTO_T/*, EF_E*/>
+		where DTO_T : class, new() //типізований поко-класом(DTO_T)
+		//where EF_E : class, new()  //типізований  Entity-класом(EF_E)
 	{
-		T Get(Guid id);
-		IEnumerable<T> GetAll();
-		IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
-		void AddOrUpdate(T obj);
-		void Delete(T obj);
+		DTO_T Get(Guid id);
+		IEnumerable<DTO_T> GetAll();
+		IEnumerable<DTO_T> FindBy(Expression<Func<DTO_T, bool>> predicate);
+		void AddOrUpdate(DTO_T obj);
+		void Delete(DTO_T obj);
 	}
 }

@@ -46,13 +46,13 @@
   <ItemGroup>
     <Compile Include="Common\CommonDTOService.cs" />
     <Compile Include="Common\IDTOService.cs" />
-    <Compile Include="Instatnt\CartStatusVMRep.cs" />
-    <Compile Include="Instatnt\CartVMRep.cs" />
-    <Compile Include="Instatnt\CategoryVMRep.cs" />
-    <Compile Include="Instatnt\DeliveryMethodVMRep.cs" />
-    <Compile Include="Instatnt\OrderPosVMRep.cs" />
-    <Compile Include="Instatnt\PhotoVMRep.cs" />
-    <Compile Include="Instatnt\ProductVMRep.cs" />
+    <Compile Include="Instatnt\CartStatusVMService.cs" />
+    <Compile Include="Instatnt\CartVMService.cs" />
+    <Compile Include="Instatnt\CategoryVMService.cs" />
+    <Compile Include="Instatnt\DeliveryMethodVMService.cs" />
+    <Compile Include="Instatnt\OrderPosVMService.cs" />
+    <Compile Include="Instatnt\PhotoVMService.cs" />
+    <Compile Include="Instatnt\ProductVMService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

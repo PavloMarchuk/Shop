@@ -16,10 +16,10 @@ namespace TESTconsole
 		{
 			ShopContext SC = new ShopContext();
 
-			CategoryVMRep categoryRep = new CategoryVMRep(new CategoryRep(SC));
-			ProductVMRep PR = new ProductVMRep(new ProductRep(SC));
+			CategoryVMService categoryRep = new CategoryVMService(new CategoryRep(SC));
+			ProductVMService PR = new ProductVMService(new ProductRep(SC));
 			CategoryVM laptops = categoryRep.FindBy(c => c.CategoryName == "Laptop").FirstOrDefault();
-			PhotoVMRep photoRep = new PhotoVMRep(new PhotoRep(SC));
+			PhotoVMService photoRep = new PhotoVMService(new PhotoRep(SC));
 
 			ProductVM ноут = PR.FindBy(n => n.ProductName.Contains("Ноутбук Dell")).FirstOrDefault();
 			

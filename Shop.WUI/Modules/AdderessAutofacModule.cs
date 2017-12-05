@@ -32,17 +32,19 @@ namespace Shop.WUI.Modules
 			builder.RegisterType(typeof(PhotoRep)).As(typeof(IGenericRepository<Photo>)).InstancePerRequest();
 			builder.RegisterType(typeof(ProductRep)).As(typeof(IGenericRepository<Product>)).InstancePerRequest();
 			/////////////////////
-			builder.RegisterType(typeof(CartStatusVMRep)).As(typeof(IDTOService<CartStatu>)).InstancePerRequest();
-			builder.RegisterType(typeof(CartVMRep)).As(typeof(IDTOService<Cart>)).InstancePerRequest();
-			builder.RegisterType(typeof(CategoryVMRep)).As(typeof(IDTOService<Category>)).InstancePerRequest();
-			builder.RegisterType(typeof(DeliveryMethodVMRep)).As(typeof(IDTOService<DeliveryMethod>)).InstancePerRequest();
-			builder.RegisterType(typeof(OrderPosVMRep)).As(typeof(IDTOService<OrderPos>)).InstancePerRequest();
-			builder.RegisterType(typeof(PhotoVMRep)).As(typeof(IDTOService<Photo>)).InstancePerRequest();
-			builder.RegisterType(typeof(ProductVMRep)).As(typeof(IDTOService<Product>)).InstancePerRequest();
+			builder.RegisterType(typeof(CartStatusVMService)).As(typeof(IDTOService<CartStatusVM>)).InstancePerRequest();
+			builder.RegisterType(typeof(CartVMService)).As(typeof(IDTOService<CartVM>)).InstancePerRequest();
+			builder.RegisterType(typeof(CategoryVMService)).As(typeof(IDTOService<CategoryVM>)).InstancePerRequest();
+			builder.RegisterType(typeof(DeliveryMethodVMService)).As(typeof(IDTOService<DeliveryMethodVM>)).InstancePerRequest();
+			builder.RegisterType(typeof(OrderPosVMService)).As(typeof(IDTOService<OrderPosVM>)).InstancePerRequest();
+			builder.RegisterType(typeof(PhotoVMService)).As(typeof(IDTOService<PhotoVM>)).InstancePerRequest();
+			builder.RegisterType(typeof(ProductVMService)).As(typeof(IDTOService<ProductVM>)).InstancePerRequest();
+
+			base.Load(builder);
+
+			//ProductVMService xxxx = new ProductVMService(new ProductRep(new ShopContext()));
 		}
 	}
 }
 
-
-
-
+//////////////builder.RegisterType(typeof(StreetRepository)).As(typeof(IGenericRepository<Street>)).InstancePerRequest();

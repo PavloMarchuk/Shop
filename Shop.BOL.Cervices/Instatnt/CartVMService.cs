@@ -7,9 +7,9 @@ using System.Linq;
 
 namespace Shop.BOL.Cervices.Instatnt
 {
-	public class CartVMRep : CommonDTOService<CartVM, Cart>
+	public class CartVMService : CommonDTOService<CartVM, Cart>
 	{
-		public CartVMRep(CartRep eRep) : base(eRep) { }
+		public CartVMService(Step.Repository.Common.IGenericRepository<Cart> eRep) : base(eRep) { }
 
 		protected override MapperConfiguration MapConfig()
 		{
